@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090b10">
+<title>Majestic SriLanka RP | Official Rules</title>
+<style>
+:root{--bg:#090b10;--panel:#10141d;--panel2:#151b26;--line:#273040;--text:#f3f5fa;--muted:#a3adbd;--red:#65c7ff;--red2:#168bd0;--green:#36d399;--gold:#f5c15d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:radial-gradient(ellipse at 78% -12%,#102b42 0,transparent 34%),var(--bg);color:var(--text);font:15px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit}.layout{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:285px;background:rgba(12,15,22,.96);border-right:1px solid var(--line);padding:26px 18px;display:flex;flex-direction:column;z-index:10;backdrop-filter:blur(14px);overflow:auto}
+.brand{display:flex;align-items:center;gap:12px;padding:0 10px 23px;border-bottom:1px solid var(--line)}.crest{width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,var(--red),#145c91);display:grid;place-items:center;font-weight:950;font-size:18px;box-shadow:0 8px 28px #65c7ff2a}.brand strong{display:block;font-size:12px;letter-spacing:1.6px}.brand small{color:var(--muted);font-size:10px;letter-spacing:2px}
+.nav-label{font-size:10px;color:#687386;letter-spacing:2px;font-weight:800;margin:22px 12px 9px}.nav{display:grid;gap:5px}.nav a{display:flex;gap:11px;align-items:center;text-decoration:none;color:#b9c2d1;padding:10px 12px;border-radius:10px;border:1px solid transparent;font-size:13px;transition:.2s}.nav a span{width:23px;color:#778195;font-size:11px;font-weight:800}.nav a:hover,.nav a.active{background:#102637;border-color:#214d6b;color:#fff}.nav a.active span{color:var(--red)}.side-note{margin-top:auto;padding:14px;border:1px solid var(--line);background:#0f131b;border-radius:12px;color:var(--muted);font-size:11px}.side-note b{color:var(--text);display:block;margin-bottom:4px}
+main{margin-left:285px;max-width:1240px;padding:34px clamp(20px,4vw,58px) 70px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:30px}.crumb{font-size:11px;color:var(--muted);letter-spacing:1.7px;text-transform:uppercase}.status{font-size:10px;letter-spacing:1.4px;color:var(--green);border:1px solid #205a48;background:#10251f;padding:7px 10px;border-radius:99px;white-space:nowrap}.hero{position:relative;overflow:hidden;border:1px solid #214b68;border-radius:24px;padding:clamp(28px,5vw,58px);background:linear-gradient(112deg,rgba(24,19,29,.98),rgba(13,17,25,.95) 64%),#12141d;box-shadow:0 24px 80px #0005;animation:rise .65s ease both}.hero:after{content:"MS";position:absolute;right:3%;top:-28%;font-size:clamp(160px,26vw,330px);font-weight:1000;letter-spacing:-.1em;color:#ffffff05;pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#83d4ff;font-size:11px;letter-spacing:2.5px;font-weight:850}.eyebrow:before{content:"";width:25px;height:2px;background:var(--red)}h1{font-size:clamp(36px,5.2vw,66px);line-height:1.04;letter-spacing:-2px;margin:17px 0 15px;max-width:760px}h1 em{font-style:normal;color:var(--red)}.hero p{max-width:650px;color:#b6bfcd;margin:0;font-size:15px}.hero-bottom{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.pill{border:1px solid #353c4b;background:#161b25;border-radius:9px;padding:9px 12px;font-size:11px;color:#d5dbe5}.pill b{color:#fff}.search-wrap{position:relative;margin:26px 0 20px}.search-wrap input{width:100%;background:#111620;border:1px solid #2b3443;border-radius:13px;padding:17px 48px 17px 48px;color:var(--text);font:inherit;outline:none;transition:.2s}.search-wrap input:focus{border-color:#319bd7;box-shadow:0 0 0 3px #65c7ff1c}.search-icon{position:absolute;left:17px;top:50%;transform:translateY(-50%);color:#8894a7;font-size:17px}.shortcut{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:10px;color:#758094;border:1px solid #343d4d;border-radius:5px;padding:3px 6px}.quick-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0 44px}.quick{padding:16px;background:linear-gradient(145deg,#151b26,#0e1219);border:1px solid var(--line);border-radius:14px;transition:transform .2s,border-color .2s}.quick:hover{transform:translateY(-3px);border-color:#2e729e}.quick small{color:var(--muted);font-size:10px;letter-spacing:1.3px}.quick strong{display:block;font-size:22px;margin-top:3px}.quick span{font-size:11px;color:#8792a4}
+.rule-section{margin:0 0 20px;animation:rise .5s ease both}.section-head{display:flex;align-items:center;gap:14px;margin:42px 0 15px}.section-num{width:42px;height:42px;display:grid;place-items:center;background:#102637;border:1px solid #285a7b;border-radius:12px;color:#65c7ff;font-size:13px;font-weight:900}.section-head h2{font-size:22px;letter-spacing:-.5px;margin:0}.section-head p{margin:2px 0 0;color:var(--muted);font-size:12px}.rules-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.rule-card{background:linear-gradient(145deg,#121721,#0e1219);border:1px solid var(--line);border-radius:14px;padding:18px 19px;transition:border-color .2s,transform .2s}.rule-card:hover{border-color:#2a5c7c;transform:translateY(-2px)}.rule-card h3{font-size:14px;margin:0 0 9px;color:#fff;display:flex;gap:9px;align-items:center}.rule-card h3:before{content:"";width:5px;height:17px;border-radius:4px;background:var(--red);flex:0 0 auto}.rule-card ul{padding-left:18px;margin:0;color:#b5bfce;font-size:13px}.rule-card li{padding:3px 0 3px 2px}.rule-card li::marker{color:#65c7ff}.wide{grid-column:1/-1}.callout{border:1px solid #28516c;background:linear-gradient(100deg,#102637,#141923);border-radius:13px;padding:16px 18px;color:#c8ced9;font-size:13px;margin-top:14px}.callout b{color:#83d4ff}.ban-table{width:100%;border-collapse:collapse;font-size:13px;overflow:hidden;border-radius:10px}.ban-table th{text-align:left;background:#20151c;color:#9cddff;font-size:10px;letter-spacing:1.5px;text-transform:uppercase}.ban-table th,.ban-table td{padding:12px 14px;border-bottom:1px solid var(--line)}.ban-table td{color:#c1c9d6}.ban-table tr:last-child td{border-bottom:0}.ban-table td:last-child{font-weight:750;color:#f5f6f9}.ban-table tr:last-child td:last-child{color:#65c7ff}.empty{display:none;text-align:center;padding:28px;color:var(--muted);border:1px dashed var(--line);border-radius:12px}.footer{border-top:1px solid var(--line);margin-top:55px;padding-top:25px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#788396;font-size:11px}.footer strong{color:#e4e8ef;letter-spacing:1px}.back-top{position:fixed;right:22px;bottom:22px;border:1px solid #285a7b;background:#102637;color:#fff;border-radius:12px;padding:10px 14px;text-decoration:none;font-size:12px;box-shadow:0 10px 30px #0007}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+@media(max-width:950px){.sidebar{width:235px}main{margin-left:235px;padding:25px 22px 55px}.quick-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.rules-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.sidebar{position:relative;width:auto;inset:auto;padding:15px 14px;border-right:0;border-bottom:1px solid var(--line)}.brand{padding:0 5px 13px}.nav-label{margin:13px 5px 7px}.nav{display:flex;overflow-x:auto;padding-bottom:3px}.nav a{white-space:nowrap;padding:8px 10px;font-size:11px}.nav a span{display:none}.side-note{display:none}main{margin:0;padding:18px 14px 45px}.topbar{margin-bottom:18px}.hero{border-radius:17px;padding:28px 22px}h1{letter-spacing:-1.2px}.quick-grid{grid-template-columns:1fr 1fr;gap:8px;margin-bottom:32px}.quick:last-child{grid-column:1/-1}.section-head{margin-top:32px}.section-head h2{font-size:19px}.shortcut{display:none}.search-wrap input{padding-right:15px}.footer{margin-top:38px}.back-top{right:12px;bottom:12px}}
+@media print{.sidebar,.topbar,.search-wrap,.quick-grid,.back-top{display:none!important}main{margin:0;padding:0;max-width:none}.hero{box-shadow:none;animation:none}.rule-card{break-inside:avoid;background:#fff;color:#111;border:1px solid #bbb}.rule-card h3,.section-head h2{color:#111}.rule-card ul,.section-head p{color:#333}body{background:#fff;color:#111}}
+</style>
+</head>
+<body>
+<div class="layout" id="top">
+<aside class="sidebar">
+  <div class="brand"><div class="crest">M</div><div><strong>MAJESTIC SRILANKA</strong><small>ROLEPLAY • RULEBOOK</small></div></div>
+  <div class="nav-label">RULEBOOK NAVIGATION</div>
+  <nav class="nav" id="nav">
+    <a href="#general" class="active"><span>01</span> General Guidelines</a>
+    <a href="#character"><span>02</span> Character Creation</a>
+    <a href="#roleplay"><span>03</span> Roleplay Guidelines</a>
+    <a href="#combat"><span>04</span> Combat Rules</a>
+    <a href="#reminders"><span>05</span> RP Reminders</a>
+    <a href="#failrp"><span>06</span> Fail RP</a>
+    <a href="#pd"><span>07</span> PD Rules</a>
+    <a href="#ems"><span>08</span> EMS Rules</a>
+    <a href="#bans"><span>09</span> Ban Guidelines</a>
+  </nav>
+  <div class="side-note"><b>BE PART OF THE STORY</b>Read the full rulebook before entering the city. Quality roleplay starts with respect.</div>
+</aside>
+<main>
+  <div class="topbar"><div class="crumb">Community / Official Documentation / Rules</div><div class="status">● OFFICIAL RULEBOOK</div></div>
+  <header class="hero">
+    <div class="eyebrow">YOUR CITY. YOUR STORY.</div>
+    <h1>MAJESTIC SRILANKA<br><em>RP RULES</em></h1>
+    <p>Welcome to the official city rulebook. Read and understand these guidelines before you begin your journey. Respect the community, protect the roleplay, and help make every scene meaningful.</p>
+    <div class="hero-bottom"><div class="pill"><b>09</b> Rule Categories</div><div class="pill"><b>18+</b> Community</div><div class="pill">Fair Play • Quality RP • Respect</div></div>
+  </header>
+  <div class="search-wrap"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="Search rules, keywords, punishments..." aria-label="Search rules"><span class="shortcut">LIVE SEARCH</span></div>
+  <div class="quick-grid">
+    <div class="quick"><small>COMMUNITY STANDARD</small><strong>18+</strong><span>Mature community</span></div>
+    <div class="quick"><small>REPORT WINDOW</small><strong>24 HRS</strong><span>Submit reports on time</span></div>
+    <div class="quick"><small>NEW LIFE RULE</small><strong>15 MIN</strong><span>Memory restriction after death</span></div>
+  </div>
+  <div id="sections">
+  <section class="rule-section" id="general" data-title="general guidelines microphone community conduct mature content harassment clothing monetization business">
+    <div class="section-head"><div class="section-num">01</div><div><h2>General Guidelines</h2><p>The standards expected from every member of the city.</p></div></div>
+    <div class="rules-grid">
+      <article class="rule-card"><h3>Microphone Requirement</h3><ul><li>A working microphone is required in-city at all times.</li><li>Clear communication is essential for roleplay and in-game reporting.</li></ul></article>
+      <article class="rule-card"><h3>Community Conduct</h3><ul><li>Staff are not responsible for mediating personal disputes between players.</li><li>Revenge or petty reporting is strictly prohibited.</li><li>Staff may remove players for OOC misconduct to maintain a safe, healthy community.</li></ul></article>
+      <article class="rule-card"><h3>Mature Content</h3><ul><li>This is an 18+ server. Mature or adult humor and discussions may occur.</li><li>ERP is allowed, subject to applicable consent and server rules.</li></ul></article>
+      <article class="rule-card"><h3>Respect & Harassment</h3><ul><li>Racism, sexism, and all forms of hateful prejudice are prohibited.</li><li>Harassment of any kind, sexual or otherwise, may result in a ban.</li></ul></article>
+      <article class="rule-card"><h3>Appearance & Clothing</h3><ul><li>Realistic clothing is required.</li><li>Civilians may not wear PD or MD uniforms.</li><li>Public nudity is prohibited.</li></ul></article>
+      <article class="rule-card"><h3>Staff Conduct</h3><ul><li>Constructive criticism is welcome.</li><li>Toxicity toward staff will not be tolerated.</li></ul></article>
+      <article class="rule-card"><h3>Monetization Policy</h3><ul><li>Selling in-game items or services for real money is prohibited.</li><li>Trading in-game cash for real money is strictly forbidden.</li></ul></article>
+      <article class="rule-card"><h3>Business & Property</h3><ul><li>Inactive businesses may be revoked by staff.</li></ul></article>
+    </div>
+  </section>
+  <section class="rule-section" id="character" data-title="character creation customization names gender models lgbtq">
+    <div class="section-head"><div class="section-num">02</div><div><h2>Character Creation</h2><p>Create a character that belongs in the world.</p></div></div>
+    <div class="rules-grid">
+      <article class="rule-card"><h3>Customization</h3><ul><li>All characters must be fully customized; default ped models are not allowed.</li><li>Staff may request changes if a character lacks effort.</li></ul></article>
+      <article class="rule-card"><h3>Names & Models</h3><ul><li>Use common sense and keep character names appropriate.</li><li>Character models should match the character's intended gender presentation.</li><li>LGBTQ+ characters are fully supported.</li></ul></article>
+    </div>
+  </section>
+  <section class="rule-section" id="roleplay" data-title="roleplay in character ooc safe zones">
+    <div class="section-head"><div class="section-num">03</div><div><h2>Roleplay Guidelines</h2><p>Keep immersion strong and interactions meaningful.</p></div></div>
+    <div class="rules-grid">
+      <article class="rule-card"><h3>Roleplay First</h3><ul><li>Stay in character at all times during active roleplay.</li><li>Report rule breaks after the scenario is complete, except serious violations requiring immediate intervention.</li><li>Criminals must reciprocate roleplay when interacting with PD.</li><li>Threatened characters must roleplay fear and compliance where appropriate.</li></ul></article>
+      <article class="rule-card"><h3>OOC Discussions</h3><ul><li>Keep in-game conversations in character.</li><li>Do not break character to explain rules or threaten reports.</li><li>OOC phrases that break immersion, such as “come out the Safe Zone,” are prohibited.</li></ul></article>
+      <article class="rule-card wide"><h3>Safe Zones</h3><ul><li>Protected areas include city event areas, apartments, hospitals, player-owned shops, and legal civilian job locations.</li><li>Violence or hostile roleplay is not allowed in safe zones.</li></ul></article>
+    </div>
+  </section>
+  <section class="rule-section" id="combat" data-title="combat logging crashes item returns exploiting powergaming carrying metagaming rdm vdm value life">
+    <div class="section-head"><div class="section-num">04</div><div><h2>Combat Rules</h2><p>Fair play, realistic consequences, and no exploiting mechanics.</p></div></div>
+    <div class="rules-grid">
+      <article class="rule-card"><h3>Combat Logging</h3><ul><li>Disconnecting during active roleplay to avoid consequences is prohibited.</li><li>Report crashes through the designated Discord crash-report channel.</li><li>Rejoin and continue the scene where feasible.</li></ul></article>
+      <article class="rule-card"><h3>Item Returns</h3><ul><li>Submit a clip showing the lost items and relevant circumstances.</li><li>Evidence showing rule-breaking may void the item-return request.</li></ul></article>
+      <article class="rule-card"><h3>Exploiting</h3><ul><li>Abusing game mechanics, bugs, or glitches for personal gain is prohibited.</li></ul></article>
+      <article class="rule-card"><h3>Powergaming</h3><ul><li>Always allow counterplay for other players.</li><li>Unrealistic drug selling or NPC exploitation is prohibited.</li></ul></article>
+      <article class="rule-card"><h3>Escorting & Carrying</h3><ul><li>Only one person may be carried at a time.</li><li>Use vehicles properly; escorted players must be safely inside when transported.</li></ul></article>
+      <article class="rule-card"><h3>Metagaming</h3><ul><li>Using real-life or out-of-game information to gain an in-character advantage is prohibited.</li></ul></article>
+      <article class="rule-card"><h3>RDM — Random Deathmatch</h3><ul><li>Attacking without valid roleplay is prohibited.</li><li>Revenge killing is forbidden.</li></ul></article>
+      <article class="rule-card"><h3>VDM — Vehicle Deathmatch</h3><ul><li>Using vehicles to attack players without valid roleplay is prohibited.</li></ul></article>
+      <article class="rule-card wide"><h3>Value Your Life (VoL)</h3><ul><li>Fear realistic threats and avoid unnecessary combat when your character's life is at risk.</li></ul></article>
+    </div>
+  </section>
+  <section class="rule-section" id="reminders" data-title="roleplay reminders interactions businesses hostages third party scamming robbing ocean dumping recording hitmen bounties conflict character kill off nlr">
+    <div class="section-head"><div class="section-num">05</div><div><h2>Roleplay Reminders</h2><p>Rules for scenarios, evidence, conflict, and consequences.</p></div></div>
+    <div class="rules-grid">
+      <article class="rule-card"><h3>Interaction Duration</h3><ul><li>All interactions must provide meaningful roleplay.</li><li>Civilians cannot harass whitelisted factions without provocation or valid roleplay justification.</li></ul></article>
+      <article class="rule-card"><h3>Bored RP</h3><ul><li>Avoid aimless criminal activity, including robbing or shooting without proper roleplay.</li></ul></article>
+      <article class="rule-card"><h3>RP in Businesses</h3><ul><li>A minimum of two minutes of meaningful interaction is required before violence.</li><li>Employees must clearly indicate on-duty or off-duty status.</li><li>Robbing businesses without valid roleplay is prohibited.</li></ul></article>
+      <article class="rule-card"><h3>Hostage Rules</h3><ul><li>Hostages must be random civilians, not faction members.</li><li><b>Option A:</b> 2:1 ratio with quality interaction lasting 20–30 seconds.</li><li><b>Option B:</b> 3:1 ratio, guns already drawn, minimal interaction.</li><li>Maximum two hostages per scene.</li><li>Killing a hostage is allowed only when justified by the roleplay.</li></ul></article>
+      <article class="rule-card"><h3>Third-Partying</h3><ul><li>Interfering in ongoing scenarios or shootouts without valid involvement is prohibited.</li></ul></article>
+      <article class="rule-card"><h3>Scamming RP</h3><ul><li>Scamming players during vehicle or house transactions is prohibited.</li></ul></article>
+      <article class="rule-card"><h3>Robbing</h3><ul><li>Taking the majority of a player's items without appropriate roleplay is not allowed.</li></ul></article>
+      <article class="rule-card"><h3>Ocean Dumping</h3><ul><li>Allowed for story purposes, but cannot force memory loss.</li><li>Vehicles may not be dumped without valid roleplay.</li></ul></article>
+      <article class="rule-card wide"><h3>Recording & Evidence</h3><ul><li>Evidence videos must be captured using recording software.</li><li>Run clipping software when a scene starts.</li><li>Clips must be at least two minutes long.</li><li>Failure to clip may void item returns and in-game reports.</li><li>Reports must be submitted within 24 hours of the event.</li><li>Reports must include video and audio showing the full interaction and events leading to the alleged rule break. Evidence from both sides should be included when available and required.</li></ul></article>
+      <article class="rule-card"><h3>Hitmen & Bounties</h3><ul><li>Allowed with prior knowledge and realistic roleplay.</li></ul></article>
+      <article class="rule-card"><h3>Conflict Expiration</h3><ul><li>Conflicts must allow a way to end the roleplay.</li><li>Continual harassment without resolution may be considered griefing.</li></ul></article>
+      <article class="rule-card"><h3>Character Kill-Off (CK)</h3><ul><li>Must be agreed upon by the affected player.</li></ul></article>
+      <article class="rule-card"><h3>New Life Rule (NLR)</h3><ul><li>Players may not remember events leading to their death for 15 minutes.</li><li>Scene reminders must be roleplayed and clipped.</li></ul></article>
+    </div>
+  </section>
+  <section class="rule-section" id="failrp" data-title="fail rp fail roleplay injuries ooc drug locations impersonating pd ems me commands death running spectating cop baiting">
+    <div class="section-head"><div class="section-num">06</div><div><h2>Fail Roleplay (Fail RP)</h2><p>High-quality, realistic roleplay is expected at all times.</p></div></div>
+    <div class="rules-grid">
+      <article class="rule-card wide"><h3>Examples of Fail RP</h3><ul><li>Ignoring or failing to roleplay injuries.</li><li>Using OOC information for in-character advantage.</li><li>Posting drug locations publicly without valid roleplay justification.</li><li>Impersonating PD or EMS.</li><li>Neglecting required /me commands.</li><li>Death-running or walking/running in circles to avoid consequences.</li><li>Spectating shootouts without legitimate involvement.</li><li>Cop baiting without meaningful roleplay.</li></ul></article>
+    </div>
+  </section>
+  <section class="rule-section" id="pd" data-title="pd player rules police fear arrests warning shots doj lethal force">
+    <div class="section-head"><div class="section-num">07</div><div><h2>PD Player Rules</h2><p>Interactions with law enforcement must remain realistic.</p></div></div>
+    <div class="rules-grid">
+      <article class="rule-card wide"><h3>Law Enforcement Interactions</h3><ul><li>Fear PD realistically.</li><li>Arrests must be respected; RDM and robbery of PD are prohibited.</li><li>Warning shots must be given before engaging PD in combat, subject to the circumstances and applicable server rules.</li><li>Invalid PD actions should be reported through DOJ cases.</li><li>Lethal force is allowed only when justified by roleplay and applicable server rules.</li></ul></article>
+    </div>
+  </section>
+  <section class="rule-section" id="ems" data-title="ems player rules emergency medical calls g 911ems hospital taps">
+    <div class="section-head"><div class="section-num">08</div><div><h2>EMS Player Rules</h2><p>Respect medical roleplay and emergency services.</p></div></div>
+    <div class="rules-grid">
+      <article class="rule-card wide"><h3>Medical Roleplay</h3><ul><li>Spamming EMS calls is prohibited.</li><li>Press “G” or use <code>/911ems</code> for medical emergencies.</li><li>Scenes should be considered over once EMS arrives, unless further roleplay is required or authorized.</li><li>Roleplay injuries realistically; “taps” are not allowed.</li><li>EMS may deny service if disrespected, in accordance with server procedures.</li><li>Hospitals are safe zones, not general hangout spots.</li></ul></article>
+    </div>
+  </section>
+  <section class="rule-section" id="bans" data-title="banning guidelines warning day days week month permanent ban cheating exploiting slurs">
+    <div class="section-head"><div class="section-num">09</div><div><h2>Ban Guidelines</h2><p>Repeated or serious violations may lead to escalating punishments.</p></div></div>
+    <div class="rules-grid"><article class="rule-card wide">
+      <table class="ban-table"><thead><tr><th>Offense</th><th>Action</th></tr></thead><tbody>
+      <tr><td>1st Offense</td><td>Warning</td></tr><tr><td>2nd Offense</td><td>1-Day Ban</td></tr><tr><td>3rd Offense</td><td>3-Day Ban</td></tr><tr><td>4th Offense</td><td>1-Week Ban</td></tr><tr><td>5th Offense</td><td>1-Month Ban</td></tr><tr><td>6th Offense</td><td>Permanent Ban</td></tr>
+      </tbody></table>
+      <div class="callout"><b>Serious violations:</b> OOC offenses may result in a warning through to a permanent ban. Cheating, exploiting, or using derogatory slurs may result in a permanent ban. Staff may consider the severity, frequency, and circumstances of each violation.</div>
+    </article></div>
+  </section>
+  <div class="empty" id="empty">No rules matched your search. Try another keyword.</div>
+  </div>
+  <footer class="footer"><div><strong>MAJESTIC SRILANKA RP</strong><br>Respect the rules. Respect the community. Create quality roleplay.</div><div>OFFICIAL COMMUNITY RULEBOOK · <span id="year"></span></div></footer>
+</main>
+<a href="#top" class="back-top">↑ Back to top</a>
+</div>
+<script>
+const search=document.getElementById('search');
+const sections=[...document.querySelectorAll('.rule-section')];
+const empty=document.getElementById('empty');
+search.addEventListener('input',()=>{
+ const q=search.value.trim().toLowerCase();let total=0;
+ sections.forEach(section=>{
+  let sectionMatches=0;
+  const cards=[...section.querySelectorAll('.rule-card')];
+  cards.forEach(card=>{
+   const match=!q||card.innerText.toLowerCase().includes(q)||section.dataset.title.includes(q);
+   card.style.display=match?'':'none';if(match)sectionMatches++;
+  });
+  const visible=!q||sectionMatches>0;
+  section.style.display=visible?'':'none';
+  if(visible)total+=sectionMatches;
+ });
+ empty.style.display=total?'none':'block';
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+const navLinks=[...document.querySelectorAll('.nav a')];
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id));}});
+},{rootMargin:'-20% 0px -65% 0px'});
+sections.forEach(section=>observer.observe(section));
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();search.focus();}});
+</script>
+</body>
+</html>
